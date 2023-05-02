@@ -1,0 +1,20 @@
+l=list(map(int,input().split()))
+d={}
+for i in l:
+    if i not in d:
+        d[i]=1
+    else:
+        d[i]=d[i]+1
+m=list(d.values())
+r=min(m)
+s=max(m)
+for i in d:
+    if d[i]==r:
+        r=i
+    elif d[i]==s:
+        s=i
+a=r-s
+if a>0:
+    print(a)
+else:
+    print(-1*a)
